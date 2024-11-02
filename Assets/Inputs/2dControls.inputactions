@@ -13,15 +13,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Charge",
-                    "type": "Button",
-                    "id": "471f003a-db97-4225-8556-fd58df122dcb",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -123,17 +114,6 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "0ba059c9-07b3-4ea3-a9bf-edc99f88654b",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Charge",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
