@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3191419465871918548}
   - component: {fileID: 5517637873202771121}
+  - component: {fileID: 1167285725779720840}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -86,6 +87,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1167285725779720840
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451848031035378742}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7e890e8a9bfa21409bfa71739c345c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3985455480778982026
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +587,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6949491536238757741}
   - component: {fileID: 834714787359615296}
-  - component: {fileID: 6912630193010435203}
   m_Layer: 0
   m_Name: RangedWeapon
   m_TagString: Untagged
@@ -603,28 +625,6 @@ MonoBehaviour:
   objTransform: {fileID: 0}
   mousePos: {x: 0, y: 0}
   angleToMouse: 0
---- !u!95 &6912630193010435203
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5510579277251943184}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 10c64f91ee9e83d4d9aebafe0566c5f8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7598103440771776257
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +796,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementInput: {fileID: 4262196329758245985, guid: 07e42d5291d117747862262ad4469ba3, type: 3}
   movement2d: {x: 0, y: 0}
-  animator: {fileID: 0}
+  playerAnim: {fileID: 0}
+  weaponAnim: {fileID: 0}
   speed: 1
 --- !u!114 &6406410047777607578
 MonoBehaviour:
