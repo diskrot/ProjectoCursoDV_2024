@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,6 +7,9 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public InputActionReference movementInput;
+    public InputActionReference shootInput;
+    public GameObject weaponPrefab;	
+    public GameObject bulletPrefab;
     public Vector2 movement2d;
     private Rigidbody2D rigidbody2d;
     public Animator animator;
@@ -26,6 +28,11 @@ public class PlayerController : MonoBehaviour
         movement2d = movementInput.action.ReadValue<Vector2>();
         animator.SetFloat("xspeed",movement2d.x);
         animator.SetFloat("yspeed",movement2d.y);
+
+        if (this.GetComponent<HealthSystem>().health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
     void FixedUpdate()
     {
