@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     public bool IsPlayerDead = false;
     public Score score;
     private ScoreBoard scoreBoard;
-    public string savePath;
+    private string savePath;
     
     public GameObject winScreen;
     // Music

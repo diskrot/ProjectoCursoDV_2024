@@ -10,6 +10,7 @@ public class EnemyShooting : MonoBehaviour
     public GameObject bulletSpawn;
     public float fireRate = 1.0f;
     public int randomness = 10;
+    public AudioSource shootSound;
     public List<string> ignoreTags;
 
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class EnemyShooting : MonoBehaviour
     }
     void Shoot()
     {
+        shootSound.Play();
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
         bullet.GetComponent<Bullet>().shooter = this.gameObject;
         bullet.GetComponent<Bullet>().ignoreTags = ignoreTags;

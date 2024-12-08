@@ -115,6 +115,7 @@ MonoBehaviour:
   damage: 10
   damageRate: 2
   detectionRange: 10
+  rotatateTowardsPlayer: 1
 --- !u!114 &8615667601168507611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   harm: 0
+  hurtSound: {fileID: 3749162724508117342, guid: 7f20f8d3dbd14c140ac58862ac67d747, type: 3}
 --- !u!1 &7150897759339627215
 GameObject:
   m_ObjectHideFlags: 0

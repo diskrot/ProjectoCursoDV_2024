@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public Animator animator;
     public float speed = 1f;
+    public AudioSource stepSound;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         movement2d = movementInput.action.ReadValue<Vector2>();
+        if (movement2d.x != 0 || movement2d.y != 0)
+        {
+            if (!stepSound.isPlaying)
+            {
+                stepSound.Play();
+            }
+        }
         animator.SetFloat("xspeed",movement2d.x);
         animator.SetFloat("yspeed",movement2d.y);
 
