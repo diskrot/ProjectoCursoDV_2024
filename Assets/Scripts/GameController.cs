@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     public Score score;
     private ScoreBoard scoreBoard;
     private string savePath;
-    
+    public AudioSource musicSource;    
     public GameObject winScreen;
     // Music
     //public AudioSource musicSource;
@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        musicSource.Play();
         score.points = 0;
         scoreBoard.scores = new List<Score>();
         savePath = System.IO.Path.Combine(Application.persistentDataPath, "score.json");
