@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     public int damage = 10;
     public float damageRate = 2.0f;
     public float detectionRange = 5.0f;
+    public bool rotatateTowardsPlayer = true;
 
     void Start()
     {
@@ -42,8 +43,11 @@ public class EnemyController : MonoBehaviour
             if (direction.magnitude < detectionRange)
             {
                 // Rotate towards player
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+                if (rotatateTowardsPlayer)
+                {
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+                }
                 // Move towards player
                 rigidBody.velocity = direction.normalized * speed;
             }

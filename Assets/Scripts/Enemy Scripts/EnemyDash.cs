@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyDash : MonoBehaviour
 {
     public float dashSpeedMultiplier = 10.0f;
-    public int damageMultiplier = 5;
     public float dashTime = 0.5f;
     public float dashCooldown = 2.0f;
     public float dashRange = 5.0f;
@@ -40,7 +39,6 @@ public class EnemyDash : MonoBehaviour
     IEnumerator Dash()
     {
         this.gameObject.GetComponent<EnemyController>().speed = initialSpeed * dashSpeedMultiplier;
-        this.gameObject.GetComponent<EnemyController>().damage = initialDamage * damageMultiplier;
         yield return new WaitForSeconds(dashTime);
         this.gameObject.GetComponent<EnemyController>().speed = initialSpeed;
         this.gameObject.GetComponent<EnemyController>().damage = initialDamage;

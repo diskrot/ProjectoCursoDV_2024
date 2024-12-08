@@ -12,7 +12,10 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        UpdateHealthText();
+        if (player != null)
+        {
+            UpdateHealthText();
+        }
     }
 
     void UpdateHealthText()

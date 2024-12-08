@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public struct Score
-{
-    public string name;
-    public int points;
-}
 
-[System.Serializable]
-public struct ScoreBoard
-{
-    public List<Score> scores;
-}
 
 public class GameController : MonoBehaviour
 {
+    [System.Serializable]
+    public struct Score
+    {
+        public string name;
+        public int points;
+    }
+
+    [System.Serializable]
+    public struct ScoreBoard
+    {
+        public List<Score> scores;
+    }
+
     public int totalEnemies;
     public GameObject player;
     public bool IsPlayerDead = false;
@@ -27,6 +29,7 @@ public class GameController : MonoBehaviour
     public GameObject winScreen;
     // Music
     //public AudioSource musicSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,19 +55,11 @@ public class GameController : MonoBehaviour
     public void Lose()
     {
         Debug.Log("You lose!");
-        //musicSource.Stop();
-        // Play lose music
-        //musicSource.PlayOneShot(loseMusic);
-        // Show lose screen
-        //SceneManager.LoadScene("Lose");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 
     public void Win()
     {
-        //musicSource.Stop();
-        // Play win music
-        //musicSource.PlayOneShot(winMusic);
-        // Show win screen ui gameobject
         winScreen.SetActive(true);
     }
     public void SaveScore(string name)

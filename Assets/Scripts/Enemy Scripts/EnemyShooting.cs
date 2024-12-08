@@ -21,7 +21,8 @@ public class EnemyShooting : MonoBehaviour
     void Update()
     {
         // Shoot
-        if (Time.time % (fireRate + Random.Range(0, randomness)) < Time.deltaTime)
+        if (Time.time % (fireRate + Random.Range(0, randomness)) < Time.deltaTime &&
+            this.gameObject.GetComponent<EnemyController>().detectionRange > Vector3.Distance(this.gameObject.transform.position, GameObject.Find("Player").transform.position))
         {
             Shoot();
         }
