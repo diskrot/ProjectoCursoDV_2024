@@ -217,6 +217,7 @@ MonoBehaviour:
   damage: 10
   damageRate: 2
   detectionRange: 20
+  gameControllerName: GameController
 --- !u!114 &5929838083432436263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f72e68c7f4d79b47a4ae8c98263ab05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
   harm: 0
 --- !u!114 &5668104767951102921

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6030281239311412206}
   - component: {fileID: 7795000026505054567}
   - component: {fileID: 6816939806365169156}
-  - component: {fileID: 6525177242668763558}
+  - component: {fileID: 2043952005492279278}
   - component: {fileID: 6248813760373694020}
   - component: {fileID: 5490067921830699702}
   m_Layer: 0
@@ -154,7 +154,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6525177242668763558
+--- !u!114 &2043952005492279278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,10 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc2e8ec9d118b84d8e01bccadf4031b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1
   damage: 10
-  damageRate: 0.5
-  detectionRange: 10
+  damageRate: 2
+  detectionRange: 5
+  gameControllerName: GameController
 --- !u!114 &6248813760373694020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f72e68c7f4d79b47a4ae8c98263ab05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
   harm: 0
 --- !u!114 &5490067921830699702
@@ -202,4 +204,3 @@ MonoBehaviour:
   randomness: 10
   ignoreTags:
   - Enemy
-  - Projectile

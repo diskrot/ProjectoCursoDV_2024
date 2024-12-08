@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public InputActionReference shootInput;
     public GameObject weaponPrefab;	
     public GameObject bulletPrefab;
+    public GameObject gameController;
     public Vector2 movement2d;
     private Rigidbody2D rigidbody2d;
     public Animator animator;

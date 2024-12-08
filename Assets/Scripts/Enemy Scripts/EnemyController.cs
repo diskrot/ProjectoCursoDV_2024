@@ -9,19 +9,17 @@ public class EnemyController : MonoBehaviour
     public int damage = 10;
     public float damageRate = 2.0f;
     public float detectionRange = 5.0f;
-    
+
     void Start()
     {
-        
+        GameObject gameController = GameObject.Find("GameController");
+        gameController.GetComponent<GameController>().totalEnemies++;
+        Debug.Log("Total enemies: " + gameController.GetComponent<GameController>().totalEnemies);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (this.GetComponent<HealthSystem>().health <= 0)
-        {
-            Destroy(this.gameObject);
-        }
     }
 
     private Rigidbody2D rigidBody;

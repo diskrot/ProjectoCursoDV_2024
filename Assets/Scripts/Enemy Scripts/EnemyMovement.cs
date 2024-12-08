@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
-    public GameObject target;
+    public string targetName = "Player";
     public float speed = 1.0f;
     public float detectionRange = 5.0f;
     
@@ -22,7 +22,8 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (IsTargetNearby(target))
+        GameObject target = GameObject.Find(targetName);
+        if (IsTargetDetected(target))
         {
             MoveTowardsTarget(target);
         }
@@ -32,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    bool IsTargetNearby(GameObject target)
+    bool IsTargetDetected(GameObject target)
     {
         return  target != null && 
                 Vector3.Distance(target.transform.position, this.transform.position) < detectionRange;

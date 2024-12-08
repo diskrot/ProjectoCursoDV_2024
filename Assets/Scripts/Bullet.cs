@@ -26,13 +26,13 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision with " + collision.gameObject.name);
+        //Debug.Log("Collision with " + collision.gameObject.name);
 
         if(!(ignoreTags.Contains(collision.gameObject.tag)))
         {
             if (collision.gameObject.GetComponent<HealthSystem>() != null)
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 collision.gameObject.GetComponent<HealthSystem>().harm += damage;
             }
             if (collision.gameObject != shooter)
@@ -45,12 +45,12 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger");
+        //Debug.Log("Trigger");
         if(!(ignoreTags.Contains(collision.gameObject.tag)))
         {
             if (collision.gameObject.GetComponent<HealthSystem>() != null)
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 collision.gameObject.GetComponent<HealthSystem>().harm += damage;
             }
             if (collision.gameObject != shooter)
